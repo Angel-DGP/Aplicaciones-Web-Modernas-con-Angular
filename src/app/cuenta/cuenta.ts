@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './cuenta.css',
 })
 export class Cuenta {
-
+ ngOnInit() {
+    console.log('El componente de cuenta esta arrancando!');
+  }
+  ngOnDestroy() {
+    console.log('El componente de cuenta Ha sido destruido!');
+  }
 }

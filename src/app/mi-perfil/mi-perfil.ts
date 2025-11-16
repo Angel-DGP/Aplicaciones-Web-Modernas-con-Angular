@@ -1,10 +1,8 @@
 import { Component } from "@angular/core";
 import { Cuenta } from "../cuenta/cuenta";
-import { Prestamos } from "../prestamos/prestamos";
-import { Transacciones } from "../transacciones/transacciones";
 @Component({
     selector: 'mi-perfil',
-    imports: [Cuenta, Prestamos, Transacciones],
+    imports: [Cuenta],
     templateUrl: './mi-perfil.html',
     styleUrl: './mi-perfil.css'
 })
@@ -14,6 +12,7 @@ export class MiPerfil {
     public ocupacion: string;
     public direccion: string;
     public telefono: string;
+    public mostrar_Cuenta: boolean = true;
     constructor() {
         this.nombre = "Juan Perez";
         this.edad = 30;
@@ -33,5 +32,8 @@ export class MiPerfil {
     }
     cambiarDireccion(){
         this.direccion = "Vivo en mi casa";
+    }
+    mostrarCuenta(valor: boolean){
+        this.mostrar_Cuenta = valor;
     }
 }

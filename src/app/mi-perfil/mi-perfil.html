@@ -6,6 +6,8 @@
 <p>Mi telefono es <strong>{{telefono}}</strong></p>
 <button (click)="cambiarEdad()">Cumplir años</button>
 <button (click)="cambiarDireccion()">Cambiar direccion</button>
-<app-cuenta></app-cuenta>
-<app-prestamos></app-prestamos>
-<app-transacciones></app-transacciones>
+@if(mostrar_Cuenta == false){
+<button (click)="mostrarCuenta(true)">Mostrar cuenta</button>}
+@else{
+<button (click)="mostrarCuenta(false)">Ocultar cuenta</button>}
+@if(mostrar_Cuenta == true){<app-cuenta></app-cuenta>}
