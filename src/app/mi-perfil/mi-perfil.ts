@@ -22,4 +22,16 @@ export class MiPerfil {
         this.telefono = "+593 999 999 999";
         console.log("Se cargo el componente MiPerfil correctamente.");
     }
+    ngOnInit(): void {
+        console.log("Componente MiPerfil inicializado.");
+    }
+    ngDoCheck(): void {
+        console.log("Componente actualizado.");
+    }
+    cambiarEdad(){
+        this.edad += 1;
+    }
+    cambiarDireccion(){
+        this.direccion = "Vivo en mi casa";
+    }
 }
