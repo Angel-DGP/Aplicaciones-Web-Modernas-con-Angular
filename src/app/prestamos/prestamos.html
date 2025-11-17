@@ -1,1 +1,12 @@
 <p>prestamos works!</p>
+<p>{{web}}</p>
+<a [href]="web" target="_blank" [class.activo]="redirigir" [style.fontSize.px]="redirigir ? 24 : 14"
+    [style.borderRadius.px]="10">Ir a mi web</a>
+<h2>Estructuras de control de flujo</h2>
+@if (redirigir == true) {
+<p>El enlace a {{web}} es correcto!!</p>
+} @else {
+<p>El enlace no va a funcionar!!</p>
+}
+{{redirigir}} <br>
+<button (click)="cambioRedireccion()">Cambiar redireccion</button>

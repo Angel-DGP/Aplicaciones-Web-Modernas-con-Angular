@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './prestamos.css',
 })
 export class Prestamos {
-
+  web = "clearminds.learnworlds.com"
+  redirigir = false;
+  cambioRedireccion(){
+    this.redirigir = !this.redirigir;
+  }
 }
