@@ -10,3 +10,13 @@
 }
 {{redirigir}} <br>
 <button (click)="cambioRedireccion()">Cambiar redireccion</button>
+@for(prestamo of prestamosList; track prestamo.id){
+    <ul>
+        <li>Monto del prestamo: {{prestamo.monto}}</li>
+        @if(prestamo.estado == 'Aprobado'){
+            <li style="color:green">{{prestamo.estado}}</li>
+        } @else {
+            <li style="color:red">{{prestamo.estado}}</li>
+        }
+    </ul>
+}
