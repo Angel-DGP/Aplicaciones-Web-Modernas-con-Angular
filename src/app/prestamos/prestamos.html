@@ -32,3 +32,12 @@
 <p>Tipo de prestamo no reconocido</p>
 }
 }
+<h2>Uso de Pipes</h2>
+<p>Tipo de prestamo en mayusculas: {{prestamo.tipo | uppercase}}</p>
+<p>Tipo de prestamo en minusculas: {{prestamo.tipo | lowercase}}</p>
+<p>Tipo de prestamo en Title Case: {{prestamo.tipo | titlecase}}</p>
+<p>Fecha de prestamo: {{'11/18/2025' | date:'full'}}</p>
+
+<h2>Investigados</h2>
+<p>Interes modificado con decimalPipe: {{prestamo.interes | number:'2.3-3'}}</p>
+<p>Moneda en monto: {{prestamo.monto | currency:'USD'}}</p>

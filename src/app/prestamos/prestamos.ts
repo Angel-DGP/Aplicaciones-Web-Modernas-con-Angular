@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Transacciones } from '../transacciones/transacciones';
+import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DecimalPipe, CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [Transacciones],
+  imports: [Transacciones, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DecimalPipe, CurrencyPipe],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
@@ -18,7 +19,7 @@ export class Prestamos {
     {id: 6, nombre: "Sofia Lopez", monto: 8000, estado: "Aprobado"},
   ]
   prestamo={
-    id: 1, tipo: 'v', interes: 5.5
+    id: 1, tipo: 'vehicular', interes: 5, monto: 15000
   }
   redirigir = false;
   cambioRedireccion(){
