@@ -16,3 +16,19 @@
     <li [style.color]="prestamo.estado == 'Aprobado' ? 'green' : 'red'">{{prestamo.estado}}</li>
 </ul>
 }
+@switch (prestamo.tipo) {
+@case ('personal'){
+<p>Su tipo de prestamo es personal</p>
+}
+@case ('hipotecario'){
+<p>Prestamo Hipotecario</p>
+<app-transacciones></app-transacciones>
+}
+@case ('vehicular'){
+<p>Prestamo Vehicular</p>
+<p>Este prestamo es para la compra de un vehiculo</p>
+}
+@default{
+<p>Tipo de prestamo no reconocido</p>
+}
+}
