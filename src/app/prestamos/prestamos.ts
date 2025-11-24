@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { Transacciones } from '../transacciones/transacciones';
-import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DecimalPipe, CurrencyPipe } from '@angular/common';
+import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DecimalPipe, CurrencyPipe, NgClass } from '@angular/common';
 import { cambiarAsciiPipe } from '../pipes/cambiarAscii';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [Transacciones, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DecimalPipe, CurrencyPipe,cambiarAsciiPipe],
+  imports: [Transacciones, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DecimalPipe, CurrencyPipe, cambiarAsciiPipe, NgClass],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
 export class Prestamos {
+  public importante: string = 'no';
   web = "clearminds.learnworlds.com"
   prestamosList = [
     {id: 1, nombre: "Juan Perez", monto: 5000, estado: "Aprobado"},
