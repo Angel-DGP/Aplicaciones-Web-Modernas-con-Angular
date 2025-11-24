@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Transacciones } from '../transacciones/transacciones';
 import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DecimalPipe, CurrencyPipe } from '@angular/common';
+import { cambiarAsciiPipe } from '../pipes/cambiarAscii';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [Transacciones, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DecimalPipe, CurrencyPipe],
+  imports: [Transacciones, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DecimalPipe, CurrencyPipe,cambiarAsciiPipe],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
