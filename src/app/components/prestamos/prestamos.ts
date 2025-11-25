@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Transacciones } from '../transacciones/transacciones';
 import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, DecimalPipe, CurrencyPipe, NgClass, NgStyle } from '@angular/common';
-import { cambiarAsciiPipe } from '../pipes/cambiarAscii';
+import { cambiarAsciiPipe } from '../../pipes/cambiarAscii';
 
 @Component({
   selector: 'app-prestamos',

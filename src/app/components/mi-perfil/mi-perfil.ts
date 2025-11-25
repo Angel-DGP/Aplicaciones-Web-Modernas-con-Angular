@@ -1,8 +1,9 @@
 import { Component } from "@angular/core";
 import { Cuenta } from "../cuenta/cuenta";
+import { Transacciones } from "../transacciones/transacciones";
 @Component({
     selector: 'mi-perfil',
-    imports: [Cuenta],
+    imports: [Cuenta, Transacciones],
     templateUrl: './mi-perfil.html',
     styleUrl: './mi-perfil.css'
 })
