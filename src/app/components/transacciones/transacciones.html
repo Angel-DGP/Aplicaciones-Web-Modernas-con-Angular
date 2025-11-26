@@ -9,3 +9,9 @@
         </li>
     }
 </ul>
+<input type="text" [(ngModel)] = 'descripcion_Transaccion'>
+<button (click)="mostrarTransaccion()">Mostrar transaccion</button>
+<p>
+    Mi transaccion es:
+    <strong>{{descripcion_Transaccion}}</strong>
+</p>
