@@ -11,4 +11,8 @@
 <button (click)="mostrarCuenta(true)">Mostrar cuenta</button>}
 @else{
 <button (click)="mostrarCuenta(false)">Ocultar cuenta</button>}
-@if(mostrar_Cuenta == true){<app-cuenta></app-cuenta><app-transacciones></app-transacciones>}
+@if(mostrar_Cuenta == true)
+{<app-cuenta [nombreCliente]="nombreCliente"></app-cuenta>
+<app-transacciones (mensajeEnviado)="recibirMensaje($event)"></app-transacciones>
+<p>Mensaje recibido: {{mensajeRecibido}}</p>
+}

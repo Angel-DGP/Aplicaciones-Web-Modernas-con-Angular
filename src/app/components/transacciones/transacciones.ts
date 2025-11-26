@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Transaccion } from '../../models/transaccion';
 import { NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 export class Transacciones {
   public transaccionesList: Array<Transaccion>;
   public descripcion_Transaccion: string = '';
+   @Output() mensajeEnviado = new EventEmitter();
   constructor() {
     this.transaccionesList = [
       new Transaccion(1, new Date('2024-01-05'), 'Pago de servicio de internet', 25.50, 'egreso'),
@@ -23,5 +24,8 @@ export class Transacciones {
   }
   mostrarTransaccion(){
     alert(this.descripcion_Transaccion)
+  }
+  enviarSaludo(){
+    this.mensajeEnviado.emit("Hola desde Transacciones")
   }
 }

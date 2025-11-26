@@ -13,6 +13,10 @@ export class MiPerfil {
     public ocupacion: string;
     public direccion: string;
     public telefono: string;
+    //Reto 21 - Comunicacion entre componentes
+    public nombreCliente:string = 'Juan Perez';
+    public mensajeRecibido: string = '';
+
     public mostrar_Cuenta: boolean = true;
     constructor() {
         this.nombre = "Juan Perez";
@@ -36,5 +40,8 @@ export class MiPerfil {
     }
     mostrarCuenta(valor: boolean){
         this.mostrar_Cuenta = valor;
+    }
+    recibirMensaje(mensaje:string){
+        this.mensajeRecibido = mensaje;
     }
 }
