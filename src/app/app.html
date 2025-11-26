@@ -1,5 +1,13 @@
 <h1>Krake Dev - Escuela de Programación</h1>
 <h2>Bienvenido, {{ title() }}</h2>
 <p>La mama de la mama</p>
-<mi-perfil></mi-perfil>
+<hr>
+    <a routerLink="/inicio" routerLinkActive="linkActivo" >Inicio</a> &nbsp;
+    <a routerLink="/cuenta"  routerLinkActive="linkActivo">Cuenta</a> &nbsp;
+    <a routerLink="/transacciones"  routerLinkActive="linkActivo">Transacciones</a> &nbsp;
+    <a routerLink="/prestamos"  routerLinkActive="linkActivo">Prestamos</a> &nbsp;
+<hr>
+<router-outlet>
+</router-outlet>
+<!--<mi-perfil></mi-perfil>-->
 <!--<app-prestamos></app-prestamos>-->

@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/router';
 import { MiPerfil } from './components/mi-perfil/mi-perfil';
 import { Prestamos } from './components/prestamos/prestamos';
 
 @Component({
   selector: 'app-root',
-  imports: [Prestamos, MiPerfil],
+  imports: [RouterOutlet, RouterLinkWithHref, RouterLinkActive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
