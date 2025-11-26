@@ -19,18 +19,25 @@ export class Prestamos {
   }
   web = "clearminds.learnworlds.com"
   prestamosList = [
-    {id: 1, nombre: "Juan Perez", monto: 5000, estado: "Aprobado"},
-    {id: 2, nombre: "Maria Gomez", monto: 3000, estado: "Pendiente"},
-    {id: 3, nombre: "Carlos Sanchez", monto: 7000, estado: "Pendiente"},
-    {id: 4, nombre: "Ana Martinez", monto: 4500, estado: "Aprobado"},
-    {id: 5, nombre: "Luis Rodriguez", monto: 6000, estado: "Pendiente"},
-    {id: 6, nombre: "Sofia Lopez", monto: 8000, estado: "Aprobado"},
+    { id: 1, nombre: "Juan Perez", monto: 5000, estado: "Aprobado" },
+    { id: 2, nombre: "Maria Gomez", monto: 3000, estado: "Pendiente" },
+    { id: 3, nombre: "Carlos Sanchez", monto: 7000, estado: "Pendiente" },
+    { id: 4, nombre: "Ana Martinez", monto: 4500, estado: "Aprobado" },
+    { id: 5, nombre: "Luis Rodriguez", monto: 6000, estado: "Pendiente" },
+    { id: 6, nombre: "Sofia Lopez", monto: 8000, estado: "Aprobado" },
   ]
-  prestamo={
+  prestamo = {
     id: 1, tipo: 'vehicular', interes: 5, monto: 15000
   }
   redirigir = false;
-  cambioRedireccion(){
+  cambioRedireccion() {
     this.redirigir = !this.redirigir;
+  }
+  deletePrestamo(indice: number) {
+    this.prestamosList.splice(indice,1);
+  }
+  agregarPrestamo() {
+    let prestamo = { id: this.prestamosList.length+1, nombre: "Yo", monto: 1200, estado: "Aprobado" };
+    this.prestamosList.push(prestamo);
   }
 }
